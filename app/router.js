@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
+
+
 Router.map(function() {
   this.route('employees');
   this.route('about');
