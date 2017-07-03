@@ -3,11 +3,10 @@ import moduleForAcceptance from 'ember-bluth-company/tests/helpers/module-for-ac
 
 moduleForAcceptance('Acceptance | employees');
 
-test('visiting /', function(assert) {
+test('should link to index', function(assert) {
   visit('/');
-
   andThen(function() {
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/', 'should navigate to homepage');
   });
 });
 
