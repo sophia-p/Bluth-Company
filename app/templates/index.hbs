@@ -7,12 +7,7 @@
 </div>
 
 {{#each model as |home|}}
-	<article class="listing">
-		<h3>{{home.title}}</h3>
-		<div class="detail development">
-			<span>Description: </span>{{home.development}}
-		</div>
-	</article>
+	{{model-home home=home}}
 {{/each}}
 
 
