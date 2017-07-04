@@ -25,3 +25,10 @@ test('should link to contact information', function(assert) {
 		assert.equal(currentURL(), '/contact', 'should navigate to about');
 	});
 });
+
+test('should list model homes', function(assert) {
+	visit('/');
+	andThen(function() {
+		assert.equal(find('.listing').length, 4, 'should see 4 listings');
+	});
+});
