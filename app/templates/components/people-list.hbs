@@ -1,9 +1,14 @@
 <h2>{{title}}</h2>
 <ul>
 	{{#each people as |person|}}
-	<div {{action "showPerson" person}}> {{person.name}}
-	<ul>{{person.position}}</ul> </div>
+	<div {{action "showPerson" person.name}}> 
+	<h5>{{person.name}}</h5>
+	<img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto">
+	<p>{{person.position}}</p> </div>
 	{{/each}}
+
+
+
 </ul>
 
 {{yield}}
