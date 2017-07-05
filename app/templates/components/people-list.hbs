@@ -3,10 +3,10 @@
 	{{#each people as |person|}}
 	<div {{action "showPerson" person.name}}> 
 	<ul class="row-fluid block-grid-3 employee-grid">
-		<li><h5>{{person.name}}</h5>
+		<li><h5>{{person.position}}</h5>
 			<ul>
 		<li><img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto"></li>
-		<li><p>{{person.position}}</p></li>
+		<li><p>{{person.name}}</p></li>
 			</ul></li>
 	</ul>
 	</div>
