@@ -1,0 +1,16 @@
+ul {
+	list-style: none;
+}
+
+ul.employee-grid {
+	display: block;
+}
+
+ul.employee-grid > li {
+	width: 33.3333%;
+	display: block;
+	float: right;
+	padding: 0 12px 12px;
+	height: auto;
+	list-style: none;
+}
