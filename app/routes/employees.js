@@ -12,6 +12,11 @@ export default Ember.Route.extend({
 			id: 'lucille-bluth'
 			},
 			{
+			name: 'George Oscar Bluth',
+			position: 'Magician',
+			id: 'GOB'
+			},
+			{
 			name: 'Michael Bluth',
 			position: 'President',
 			id: 'michael-bluth',
