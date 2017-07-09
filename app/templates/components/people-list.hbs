@@ -1,7 +1,30 @@
 <h2>{{title}}</h2>
 <ul>
-	{{#each people as |person|}}
-	<li {{action "showPerson" person}}> {{person}} </li>
-	{{/each}}
+
+	<div> 
+	<ul class="row-fluid block-grid-3 employee-grid">
+	
+		<li><img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto">
+		<ul>
+		
+			
+			{{#if isShowing}}
+
+			<li {{action 'nameShow'}}><p>{{person.name}}</p></li>
+
+
+			{{else}}
+			<li {{action 'nameHide'}}><p>{{person.position}}</p></li>
+		{{/if}}
+		</ul>
+	</li>		
+	</ul>
+	</div>
+
+	
+
+
+
 </ul>
+
 {{yield}}

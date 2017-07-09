@@ -2,6 +2,44 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model(){
-		return ['George Bluth', 'Lucille Bluth', 'Michael Bluth', 'Kitty Sanchez', 'Tobias Fünke', 'Starla', 'Lindsay Bluth Fünke']
+		return [{
+			name: 'George Bluth',
+			position: 'Founder',
+			id: 'george-bluth'}, 
+			{
+			name: 'Lucille Bluth',
+			position: 'CEO',
+			id: 'lucille-bluth'
+			},
+			{
+			name: 'George Oscar Bluth',
+			position: 'Magician',
+			id: 'GOB'
+			},
+			{
+			name: 'Michael Bluth',
+			position: 'President',
+			id: 'michael-bluth',
+			},
+			{
+			name: 'Kitty Sanchez',
+			position: 'Personal Assistant',
+			id: 'kitty-sanchez' 
+			},
+			{
+			name: 'Tobias Fünke',
+			position: 'Personal Assistant',
+			id: 'tobias-funke'
+			},
+			{
+			name: 'Starla',
+			position: 'Business Model',
+			id: 'starla'
+			},
+			{
+			name: 'Lindsay Bluth Fünke',
+			position: 'Secretary',
+			id: 'lindsay-funke'
+			}]
 	}
 });

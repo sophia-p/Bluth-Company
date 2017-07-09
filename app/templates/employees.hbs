@@ -1,5 +1,10 @@
 <h2>Employees</h2>
 
-{{people-list title="List of Employees" people=model}}
 
-{{outlet}}
+
+
+
+
+{{#each model as |peopleList|}}
+	{{people-list person=peopleList}}
+{{/each}}

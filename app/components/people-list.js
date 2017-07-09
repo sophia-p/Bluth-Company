@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+	classNames: ['title-name'],
+	isShowing: false,
 	actions: {
-		showPerson(person) {
-			alert(person);
+		nameShow() {
+			this.set('isShowing', false);
+		},
+		nameHide() {
+			this.set('isShowing', true)
 		}
+		
 	}
 });

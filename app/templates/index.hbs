@@ -1,4 +1,14 @@
+<div class="jumbo">
 <h2>See Our Model Homes</h2>
 
-<img src ="/assets/images/modelhome1.png"/>
+{{#link-to 'about' class="button"}}
+	About Us
+{{/link-to}}
+</div>
+
+{{#each model as |homeUnit|}}
+	{{model-home home=homeUnit}}
+{{/each}}
+
+
 {{outlet}}
