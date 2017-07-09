@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 					development: 'Sudden Valley'
 				}, {
 					id:'model-home-night',
-					title: 'Model Home in Newport Beach',
+					title: 'Model Home in Newport Beach At Night',
 					development: 'Sudden Valley'
 				},{
 					id:'model-home-iraq',
@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 					development: 'Baghdad'
 				},{
 					id:'model-home-mexico',
-					title: 'Model Home in Newport Beach',
+					title: 'Model Home in Baja California',
 					development: 'Baja California'
 				},]
 	}

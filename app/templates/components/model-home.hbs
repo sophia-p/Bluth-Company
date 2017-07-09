@@ -1,6 +1,8 @@
 
 	<article class="listing">
-		<img src="assets/images/{{home.id}}.png" alt="model home">
+		<a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+			<img src="assets/images/{{home.id}}.png" alt="model home">
+		</a>
 		<h3>{{home.title}}</h3>
 		<div class="detail development">
 			<span>Description: </span>{{home.development}}
