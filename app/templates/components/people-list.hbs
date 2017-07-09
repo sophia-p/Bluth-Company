@@ -10,10 +10,11 @@
 			
 			{{#if isShowing}}
 
-			<li><p {{action 'nameShow'}}>{{person.name}}</p></li>
+			<li {{action 'nameShow'}}><p>{{person.name}}</p></li>
+
 
 			{{else}}
-			<li><p {{action 'nameHide'}}>{{person.position}}</p></li>
+			<li {{action 'nameHide'}}><p>{{person.position}}</p></li>
 		{{/if}}
 		</ul>
 	</li>		
