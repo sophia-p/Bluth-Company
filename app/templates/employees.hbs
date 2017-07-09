@@ -2,5 +2,10 @@
 
 
 
+
 {{people-list title="List of Employees" people=model}}
 
+
+{{#each model as |peopleList|}}
+	{{people-list person=peopleList}}
+{{/each}}
