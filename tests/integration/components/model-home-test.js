@@ -29,3 +29,22 @@ test('it should toggle wide class on click', function(assert) {
   this.$('.image').click();
   assert.equal(this.$('.image.wide').length, 0, 'rendered small after second click');
 })
+
+test('it renders', function(assert) {
+
+  // Set any properties with this.set('myProperty', 'value');
+  // Handle any actions with this.on('myAction', function(val) { ... });
+
+  this.render(hbs`{{model-home}}`);
+
+  assert.equal(this.$().text().trim(), '');
+
+  // Template block usage:
+  this.render(hbs`
+    {{#model-home}}
+      template block text
+    {{/model-home}}
+  `);
+
+  assert.equal(this.$().text().trim(), 'template block text');
+});
