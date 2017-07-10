@@ -4,7 +4,7 @@ import Ember from 'ember';
 
 let modelHome = Ember.Object.create({
   title: 'test-title',
-  description: 'home-description',
+  development: 'home description',
   id: 'home-id'
 })
 moduleForComponent('model-home', 'Integration | Component | model home', {
@@ -17,7 +17,7 @@ test('it should display model home details', function(assert) {
   this.set('modelHomeObj', modelHome );
   this.render(hbs`{{model-home modelHome=modelHomeObj}}`);
   assert.equal(this.$('.listing h3').text(), 'test-title');
-  assert.equal(this.$('.listing .description').text().trim(), 'Description: home-description');
+  assert.equal(this.$('.listing .development').text().trim(), 'home description');
 });
 
 test('it should toggle wide class on click', function(assert) {
