@@ -1,9 +1,39 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-
+import Ember from 'ember';
 moduleForComponent('people-list', 'Integration | Component | people list', {
   integration: true
 });
+
+let person = Ember.Object.create({
+  position: 'test-position',
+  name: 'test-name',
+  id: 'test-id'
+})
+
+test('it should toggle position on click', function(assert) {
+  this.set('personObj', person );
+  this.render(hbs`{{people-list person=personObj}}`);
+  assert.equal(this.$('ul li p').text(), 'test-position');
+  this.$('ul li p').click();
+  assert.equal(this.$('ul li p').text(), 'test-name');
+  this.$('ul li p').click();
+  assert.equal(this.$('ul li p').text(), 'test-position');
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 test('it renders', function(assert) {
 
