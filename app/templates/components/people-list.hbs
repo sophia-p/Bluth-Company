@@ -1,3 +1,4 @@
+
 <h2>{{title}}</h2>
 <ul>
 
@@ -9,11 +10,13 @@
 		
 			
 			{{#if isShowing}}
-
-			<li {{action 'nameShow'}}><p>{{person.name}}</p></li>
-
+			<div {{action 'nameShow'}}>
+			<li><p>{{person.position}}</p></li>
+			<li ><p>{{person.name}}</p></li>
+			</div>
 
 			{{else}}
+
 			<li {{action 'nameHide'}}><p>{{person.position}}</p></li>
 		{{/if}}
 		</ul>
