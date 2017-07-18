@@ -1,33 +1,31 @@
 
-<h2>{{title}}</h2>
-<ul>
 
+
+<h2>{{title}}</h2>
+
+<div>
 	<div> 
-	<ul class="row-fluid block-grid-3 employee-grid">
-	
-		<li><img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto">
-		<ul>
+	<img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto">
+		
 		
 			
 			{{#if isShowing}}
 			<div {{action 'nameShow'}}>
-			<li><p>{{person.position}}</p></li>
-			<li ><p>{{person.name}}</p></li>
+			{{person.position}}
+			{{person.name}}
 			</div>
 
 			{{else}}
 
-			<li {{action 'nameHide'}}><p>{{person.position}}</p></li>
+			<p {{action 'nameHide'}}>{{person.position}}</p>
 		{{/if}}
-		</ul>
-	</li>		
-	</ul>
-	</div>
 
+	</div>
+</div>
 	
 
 
 
-</ul>
+
 
 {{yield}}
