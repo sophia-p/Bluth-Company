@@ -3,26 +3,33 @@
 
 <h2>{{title}}</h2>
 
-<div>
-	<div> 
-	<img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto">
-		
+<container>
+<vbox> 
+	<hbox fit>
+	<box xs="hidden" sm="1 visible" md="2" lg="3"></box>
+	<centered xs="12" md="4">
+		{{#if isShowing}}
+			
+			
+			<div   {{action 'nameShow'}}>
+			<img src="assets/images/{{person.id}}.jpg" alt="employee image" width= "150" height= "auto" />
+			</div>
 		
 			
-			{{#if isShowing}}
-			<div {{action 'nameShow'}}>
-			{{person.position}}
-			{{person.name}}
-			</div>
+			
+			
 
 			{{else}}
-
-			<p {{action 'nameHide'}}>{{person.position}}</p>
+			<div {{action 'nameHide'}} style="width:150px; height:150px;background-color:#e56855; opacity:.8">
+			<p style="text-align:center">{{person.name}}</p>
+			<p style="text-align:center">{{person.position}}</p>
+			</div>
 		{{/if}}
+		</centered>
+	</hbox>
 
-	</div>
-</div>
-	
+</vbox>
+</container>	
 
 
 
